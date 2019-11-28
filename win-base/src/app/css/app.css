@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app {
+  height: 100%;
+  overflow: hidden;
+}
+
+.app .app-header {
+  height: 48px;
+  background-color: #0a0f0e;
+  color: #ffffff;
+  line-height: 48px;
+}
+
+.app .app-header .logo-content {
+  font-size: 22px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.app .app-main {
+  background-color: #ffffff;
+  height: calc(100% - 103px);
+}
+
+.app .app-footer {
+  height: 22px;
+  background-color: #f0f2ff;
+}
+
+.app-menu {
+  background-color: #f0f2ff;
+  font-size: 14px;
+}
+
+.app-menu .app-menu-item {
+  display: inline-block;
+  padding: 5px 15px;
+  color: #696868;
+  background-color: #ffffff;
+  border-radius: 4px 4px 0 0;
+  margin: 3px 0 0 3px;
+}
+
+.app-menu .app-menu-item:hover,
+.app-menu .app-menu-item.is-active {
+  background-color: #ff900d;
+  color: #ffffff;
+}

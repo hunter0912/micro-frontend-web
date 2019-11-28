@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: Microsoft Yahei,Hiragino Sans GB,Helvetica Neue,Helvetica,tahoma,arial,Verdana,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+}
+
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+}
+
+.clearfix:after,.clearfix:before{
+  content: "";
+  display: table;
+}
+
+.clearfix:after{
+  clear: both;
+}
+
+.clearfix{
+  *zoom: 1;
+}
