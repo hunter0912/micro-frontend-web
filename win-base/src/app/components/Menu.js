@@ -102,10 +102,13 @@ class Menu extends React.Component {
         this.setState((prevState, props) => {
             prevState.menuArr.splice(menuIndex, 1);
 
-            const nexMenu = prevState.menuArr[menuIndex] ||
-                prevState.menuArr[menuIndex - 1] ||
-                prevState.menuArr[0];
-            this.props.history.replace(nexMenu.menuAddress);
+            const activeMenu = this.refs.menuContent.getElementsByClassName("app-menu-item is-active");
+            if (!activeMenu.length || activeMenu[0].id === menuInfo.menuId) {
+                const nexMenu = prevState.menuArr[menuIndex] ||
+                    prevState.menuArr[menuIndex - 1] ||
+                    prevState.menuArr[0];
+                this.props.history.replace(nexMenu.menuAddress);
+            }
 
             return {
                 menuArr: prevState.menuArr
@@ -117,7 +120,7 @@ class Menu extends React.Component {
 
     // 更多按钮
     moreClick() {
-        const menuId = new Date().getTime()
+        const menuId = new Date().getTime() + "";
         this.setState((prevState, props) => ({
             menuArr: [
                 ...prevState.menuArr,
@@ -144,6 +147,7 @@ class Menu extends React.Component {
                                         className={"app-menu-item " +
                                             (this.props.history.location.pathname === menuInfo.menuAddress ? "is-active" : "")}
                                         key={menuInfo.menuId}
+                                        id={menuInfo.menuId}
                                         onClick={(e) => this.menuClick(e, menuInfo)}
                                         onContextMenu={(e) => this.onContextMenu(e)}
                                     >
