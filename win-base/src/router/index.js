@@ -4,9 +4,11 @@ import App from "../app";
 import LoginView from "../page/login/view/loginView";
 import HomeView from "../page/home/view/HomeView";
 
+const basePath = "/main";
+
 export const routeConfig = [
     {
-        path: '/main',
+        path: basePath,
         component: App
     },
     {
@@ -38,7 +40,7 @@ export const Routes = (
                     )
                 })
             }
-            <Redirect from="/" to="/main" />
+            <Redirect from="/" to={basePath} />
         </Switch>
     </HashRouter>
 );
@@ -48,7 +50,7 @@ export const ChildRoutes = function () {
         return (
             <Route
                 key={index}
-                path={"/main" + route.path}
+                path={basePath + route.path}
                 exact={route.exact}
                 component={route.component} />
 

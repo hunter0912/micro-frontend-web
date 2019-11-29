@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: Microsoft Yahei,Hiragino Sans GB,Helvetica Neue,Helvetica,tahoma,arial,Verdana,sans-serif;
@@ -9,6 +15,11 @@ body {
 html, body, #root {
   height: 100%;
   overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .clearfix:after,.clearfix:before{
