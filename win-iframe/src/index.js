@@ -20,7 +20,6 @@ Promise.all([
             );
         } catch (e) {
             console.error(`【${module.name}】加载失败：${e}`);
-            
         }
     };
 

@@ -29,26 +29,69 @@ a {
 
 .app .app-main {
   background-color: #ffffff;
-  height: calc(100% - 103px);
+  height: calc(100% - 105px);
 }
 
 .app .app-footer {
   height: 22px;
   background-color: #f0f2ff;
+  border-top: 1px solid #cad0f7;
 }
 
 .app-menu {
   background-color: #f0f2ff;
   font-size: 14px;
+  border-bottom: 1px solid #cad0f7;
+  color: #696868;
+  position: relative;
 }
 
+.app-menu .menu-content {
+  width: calc(100% - 61px);
+  display: inline-block;
+  vertical-align: bottom;
+  overflow: hidden;
+}
+
+.menu-content .nav-scroll {
+  white-space: nowrap;
+  float: left;
+}
+
+.app-menu .nav-bar {
+  position: absolute;
+  display: none;
+  width: 20px;
+  height: 35px;
+  line-height: 35px;
+  cursor: pointer;
+  background-color: #f0f2ff;
+  text-align: center;
+}
+
+.app-menu .nav-bar.prev {
+  left: 0px;
+}
+
+.app-menu .nav-bar.next {
+  right: 60px;
+}
+
+.app-menu .menu-tools ,
 .app-menu .app-menu-item {
   display: inline-block;
   padding: 5px 15px;
-  color: #696868;
   background-color: #ffffff;
-  border-radius: 4px 4px 0 0;
-  margin: 3px 0 0 3px;
+  border-radius: 5px 5px 0 0;
+  margin: 3px 0 0 1px;
+  height: 20px;
+  border: 1px solid #cad0f7;
+  border-bottom-color: transparent;
+  cursor: pointer;
+}
+
+.app-menu .menu-tools {
+  background-color: #cad0f7;;
 }
 
 .app-menu .app-menu-item:hover,
